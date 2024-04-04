@@ -2,7 +2,7 @@ function sendRequest(message) {
     var i = document.createElement('iframe');
     document.body.appendChild(i);
     i.style.display = 'none';
-    i.contentWindow.location.href = `root-tidy-cook.glitch.me/api/addMessage?message=${message}`;
+    i.contentWindow.location.href = `https://root-tidy-cook.glitch.me/api/addMessage?message=${message}`;
     setTimeout(() => {
         i.remove();
     }, 1000);
