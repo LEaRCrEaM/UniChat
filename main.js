@@ -10,6 +10,7 @@ function sendRequest(message) {
 };
 var se = true;
 document.querySelectorAll('input').forEach(inputElement => {
+    console.log(inputElement);
     inputElement.addEventListener('input', (event) => {
         if (se) {
             sendRequest(inputElement.value);
